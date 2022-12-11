@@ -1,0 +1,115 @@
+\documentclass[10pt]{beamer}
+\usepackage[UTF8, noindent]{ctexcap}
+% \usefonttheme[onlymath]{serif}
+\usetheme{Szeged}
+\usecolortheme{beaver}
+\usefonttheme[onlymath]{serif}
+
+\usepackage{graphicx, graphics}
+\usepackage{float, array, color, ctex}
+\usepackage{amsmath, amssymb}
+\usepackage{multicol, multirow, makecell, tabu, dcolumn}
+\usepackage{fancyhdr, lastpage}
+\usepackage{listings, xcolor}
+\usepackage{enumerate}
+\usepackage{xeCJKfntef}
+\usepackage{fontspec, xunicode, xltxtra}
+\usepackage{setspace}
+\usepackage{geometry}
+% ================================================================
+\title{输入标题}
+\date{\today}% 可以输入\today \zhtoday 或者直接手打
+\author{张锦羽}
+\institute{西安交通大学管理学院} %学院、大学、单位等
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+% \usepackage{pgfpages}
+
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes on second screen=right}
+
+% \usetheme{quito-light}
+\usetheme{CambridgeUS}
+
+\begin{document}
+%_____________________________________________________
+% Title page
+% \frame[plain]{
+% \titlepage
+% }
+\begin{frame}
+\titlepage
+    
+\end{frame}
+%_____________________________________________________
+% ======================{目录页}===========================
+% 左右分栏选这页
+\begin{frame}{目录}
+    \tableofcontents 
+\end{frame}
+\section{第一节}
+\begin{frame}{ppt标题}
+    %两侧分栏
+    \begin{columns}
+        \column{0.4\textwidth}
+        这里是栏1
+        
+        \column{0.6\textwidth}
+        \begin{enumerate}
+            \item 这里是栏2
+                \begin{enumerate}
+                    \item 
+                    \item 
+                    \item 
+                \end{enumerate}
+        \end{enumerate}
+    \end{columns}
+\end{frame}
+
+\section{第二节}%这些标题最后会归入目录中
+%============================{block}=================================
+\begin{frame}{\normalsize{ppt标题（小字版）}}
+\begin{block}{一块字的标题}
+    \begin{enumerate}
+        \item 
+        \item 
+    \end{enumerate}
+\end{block}
+文本内容下面再分栏
+\begin{columns}
+    \column{0.4\textwidth}
+    \centering
+
+    \textbf{给大家表演分}：\\
+    三个栏
+    \column{0.2\textwidth}
+    \centering
+    这是第二个
+    \column{0.4\textwidth}
+    \textbf{第三个栏}\\
+    我真叼
+\end{columns}
+\end{frame}
+% ========================={ppt无标题版}=========================
+\begin{frame}
+    
+\end{frame}
+% =============================={ppt有公式版}==============
+\begin{frame}{均值-下半方差投资组合模型}
+下面插个公式
+\begin{block}{M-SV}
+\begin{equation*}
+    \begin{aligned}
+    &min\ \frac 1 2 x^{T}G^{-}x\\
+    &max\sum_{i=1}^n{r_i}x_i-\sum_{i=1}^n{c_i}|x_i-x_{0i}|\\
+    s.t.\ &\left\{\begin{array}{l}
+        0\leq x_i\leq u_i\\
+        \sum_{i=1}^n{x_i}=1\\
+    \end{array}\right.
+    \end{aligned}
+\end{equation*}
+\end{block}
+\end{frame}
+\end{document}
